@@ -25,3 +25,5 @@ const splashPageAnimationDurationInMilliseconds = 300;
 const firstHeaderDesktopTopPadding = 5.0;
 
 const Color secondaryColor = Color.fromRGBO(26, 25, 61, 1.0);
+const Color bgColor1 = Color.fromRGBO(25, 44, 61, 1.0);
+const Color bgColor2 = Color.fromRGBO(36, 82, 124, 1.0);

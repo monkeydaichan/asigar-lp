@@ -15,7 +15,7 @@ final appTheme = ThemeData(
       color: Color.fromRGBO(26, 25, 60, 1.0),
     ),
     headline2: TextStyle(
-      fontSize: 24.0,
+      fontSize: 20.0,
       fontWeight: FontWeight.w400,
       color: Color.fromRGBO(26, 25, 60, 1.0),
     ),
