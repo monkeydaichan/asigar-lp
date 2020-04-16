@@ -1,4 +1,4 @@
-name: gallery
+name: asigar_lp
 description: A resource to help developers evaluate and use Flutter.
 
 version: 2.3.0+020300
@@ -27,7 +27,7 @@ dependencies:
   flutter_gallery_assets: ^0.1.9
   package_info: ^0.4.0
   google_fonts: ^0.4.0
-
+  font_awesome_flutter: ^8.5.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -113,4 +113,14 @@ flutter:
     - family: GalleryIcons
       fonts:
         - asset: fonts/GalleryIcons.ttf
-
+    - family: Cousine
+      fonts:
+        - asset: fonts/Cousine-Bold.ttf
+          weight: 700
+        - asset: fonts/Cousine-Regular.ttf
+          weight: 400
+        - asset: fonts/Cousine-BoldItalic.ttf
+          weight: 600
+        - asset: fonts/Cousine-Italic.ttf
+          weight: 300
+          # style: italic
