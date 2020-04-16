@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 final appTheme = ThemeData(
-  // primarySwatch: Colors.lightBlue[700],
   primaryColor: Colors.orange[300],
-  // primarySwatch: Colors.orange[300],
   fontFamily: 'Cousine',
   iconTheme: IconThemeData(color: Color.fromRGBO(26, 25, 60, 1.0), size: 32.0),
   dividerTheme: DividerThemeData(
@@ -12,8 +10,8 @@ final appTheme = ThemeData(
   ),
   textTheme: TextTheme(
     headline1: TextStyle(
-      fontWeight: FontWeight.w400,
-      fontSize: 64,
+      fontWeight: FontWeight.w700,
+      fontSize: 28,
       color: Color.fromRGBO(26, 25, 60, 1.0),
     ),
     headline2: TextStyle(

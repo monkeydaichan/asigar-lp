@@ -16,6 +16,7 @@ const double desktopSettingsWidth = 520;
 
 // Sentinel value for the system text scale factor option.
 const double systemTextScaleFactorOption = -1;
+const double cardRadius = 20.0;
 
 // The splash page animation duration.
 const splashPageAnimationDurationInMilliseconds = 300;

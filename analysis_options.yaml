@@ -3,6 +3,7 @@ include: package:pedantic/analysis_options.1.9.0.yaml
 analyzer:
   exclude:
     - lib/l10n/messages_*.dart
+    - bk/*
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
@@ -25,7 +26,7 @@ linter:
     - package_api_docs
     - package_names
     - package_prefixed_library_names
-    - prefer_const_constructors
+    # - prefer_const_constructors
     - prefer_const_literals_to_create_immutables
     - test_types_in_equals
     - throw_in_finally
