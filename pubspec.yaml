@@ -1,4 +1,4 @@
-name: gallery
+name: asigar_lp
 description: A resource to help developers evaluate and use Flutter.
 
 version: 2.3.0+020300
@@ -113,4 +113,14 @@ flutter:
     - family: GalleryIcons
       fonts:
         - asset: fonts/GalleryIcons.ttf
-
+    - family: Cousine
+      fonts:
+        - asset: assets/fonts/Cousine-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cousine-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cousine-BoldItalic.ttf
+          weight: 600
+        - asset: assets/fonts/Cousine-Italic.ttf
+          weight: 300
+          # style: italic
