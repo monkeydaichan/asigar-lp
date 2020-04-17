@@ -1,4 +1,5 @@
 import 'package:asigar_lp/widgets/about.dart';
+import 'package:asigar_lp/widgets/area.dart';
 import 'package:asigar_lp/widgets/feature.dart';
 import 'package:asigar_lp/widgets/services.dart';
 import 'package:asigar_lp/widgets/top.dart';
@@ -13,7 +14,13 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: <Widget>[TopWidget(), About(), FuturePoint(), Services()],
+            children: <Widget>[
+              TopWidget(),
+              About(),
+              FuturePoint(),
+              Services(),
+              Area(),
+            ],
           ),
         ),
       ),
