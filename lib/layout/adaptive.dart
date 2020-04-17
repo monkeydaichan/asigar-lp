@@ -51,7 +51,12 @@ double mobileHeight(BuildContext context) {
   return height * 0.6;
 }
 
-double mobileWidth(BuildContext context) {
+double fullWidth(BuildContext context) {
   final width = MediaQuery.of(context).size.width;
   return width;
+}
+
+double fullHeight(BuildContext context) {
+  final height = MediaQuery.of(context).size.height;
+  return height;
 }
