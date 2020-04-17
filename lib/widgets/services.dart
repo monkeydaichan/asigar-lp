@@ -108,7 +108,7 @@ class Services extends StatelessWidget {
                               DesktopServiceView(
                                 mainColor: secondaryColor,
                                 subColor: Theme.of(context).primaryColor,
-                                desc: 'xxxxxxxxにメッセージを送ってください',
+                                desc: 'asigarから連絡するので，配達日時を伝えてください',
                                 icondata: FontAwesome5.comment_dots,
                               ),
                               Padding(
@@ -118,8 +118,8 @@ class Services extends StatelessWidget {
                               DesktopServiceView(
                                   mainColor: secondaryColor,
                                   subColor: Theme.of(context).primaryColor,
-                                  desc: '指定した日時に集荷しに行きます',
-                                  icondata: FontAwesome.truck),
+                                  desc: '配達が来るまで待ちます',
+                                  icondata: FontAwesome.coffee),
                               Padding(
                                 padding: EdgeInsets.all(36.0),
                                 child: Icon(FontAwesome.chevron_right),
@@ -127,8 +127,8 @@ class Services extends StatelessWidget {
                               DesktopServiceView(
                                   mainColor: secondaryColor,
                                   subColor: Theme.of(context).primaryColor,
-                                  desc: '配達完了連絡を待ちます',
-                                  icondata: FontAwesome.coffee),
+                                  desc: '指定した日時に配達します',
+                                  icondata: FontAwesome.truck),
                             ],
                           )
                         : Column(
@@ -138,7 +138,7 @@ class Services extends StatelessWidget {
                               DesktopServiceView(
                                 mainColor: secondaryColor,
                                 subColor: Theme.of(context).primaryColor,
-                                desc: 'xxxxxxxxにメッセージを送ってください',
+                                desc: 'asigarから連絡するので，配達日時を伝えてください',
                                 icondata: FontAwesome5.comment_dots,
                               ),
                               Padding(
@@ -148,8 +148,8 @@ class Services extends StatelessWidget {
                               DesktopServiceView(
                                   mainColor: secondaryColor,
                                   subColor: Theme.of(context).primaryColor,
-                                  desc: '指定した日時に集荷しに行きます',
-                                  icondata: FontAwesome.truck),
+                                  desc: '配達が来るまで待ちます',
+                                  icondata: FontAwesome.coffee),
                               Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Icon(FontAwesome.chevron_down),
@@ -157,8 +157,8 @@ class Services extends StatelessWidget {
                               DesktopServiceView(
                                   mainColor: secondaryColor,
                                   subColor: Theme.of(context).primaryColor,
-                                  desc: '配達完了連絡を待ちます',
-                                  icondata: FontAwesome.coffee),
+                                  desc: '指定した日時に配達します',
+                                  icondata: FontAwesome.truck),
                             ],
                           ))),
               ],
@@ -200,7 +200,7 @@ class DesktopServiceView extends StatelessWidget {
                     .textTheme
                     .headline2
                     .apply(color: subColor),
-                maxLines: 3,
+                maxLines: 4,
               ),
             ),
           ),

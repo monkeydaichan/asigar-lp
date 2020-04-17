@@ -4,8 +4,6 @@ import 'package:asigar_lp/constants.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../layout/adaptive.dart';
-
 class FuturePoint extends StatelessWidget {
   FuturePoint({Key key}) : super(key: key);
 
