@@ -188,8 +188,8 @@ class DesktopServiceView extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
     return Container(
-      height: 200.0,
-      width: 280.0,
+      height: (isDesktop ? 200.0 : 150),
+      width: (isDesktop ? 280.0 : 280),
       child: Row(
         children: <Widget>[
           Padding(
