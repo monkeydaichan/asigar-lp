@@ -17,7 +17,7 @@ class FuturePoint extends StatelessWidget {
         height: (isDesktop
             ? desktopHeight(context) * 0.5
             : mobileHeight(context) * 2),
-        width: (isDesktop ? null : mobileWidth(context)),
+        width: (isDesktop ? null : fullWidth(context)),
         color: bgColor2,
         child: (isDesktop
             ? Row(

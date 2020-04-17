@@ -1,5 +1,6 @@
 import 'package:asigar_lp/widgets/about.dart';
 import 'package:asigar_lp/widgets/feature.dart';
+import 'package:asigar_lp/widgets/services.dart';
 import 'package:asigar_lp/widgets/top.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: <Widget>[TopWidget(), About(), FuturePoint()],
+            children: <Widget>[TopWidget(), About(), FuturePoint(), Services()],
           ),
         ),
       ),
