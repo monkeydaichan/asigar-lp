@@ -4,15 +4,6 @@ import 'package:asigar_lp/constants.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-import '../constants.dart';
-import '../constants.dart';
-import '../constants.dart';
-import '../constants.dart';
-import '../layout/adaptive.dart';
-import '../layout/adaptive.dart';
-import '../layout/adaptive.dart';
-import '../layout/adaptive.dart';
-
 class Services extends StatelessWidget {
   Services({Key key}) : super(key: key);
 
@@ -25,7 +16,7 @@ class Services extends StatelessWidget {
         child: Container(
             // height: (isDesktop ? fullHeight(context) : mobileHeight(context) * 2),
             width: fullWidth(context),
-            color: Colors.white,
+            // color: Colors.white,
             child: Column(
               children: <Widget>[
                 Padding(
