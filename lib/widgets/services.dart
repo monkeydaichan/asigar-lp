@@ -10,6 +10,8 @@ class Services extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
+    final isSmall = isDisplaySmallDesktop(context);
+    final isMobile = isMobileDesktop(context);
 
     return Padding(
         padding: EdgeInsets.all(24.0),
@@ -31,38 +33,8 @@ class Services extends StatelessWidget {
                 ),
                 Container(
                     // height: (isDesktop ? null : mobileHeight(context) * 2),
-                    child: (isDesktop
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              DesktopServiceView(
-                                mainColor: Theme.of(context).primaryColor,
-                                subColor: secondaryColor,
-                                desc: 'xxxxxxxxにメッセージを送ってください',
-                                icondata: FontAwesome5.comment_dots,
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: Theme.of(context).primaryColor,
-                                  subColor: secondaryColor,
-                                  desc: '指定した日時に集荷しに行きます',
-                                  icondata: FontAwesome.truck),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: Theme.of(context).primaryColor,
-                                  subColor: secondaryColor,
-                                  desc: '配達完了連絡を待ちます',
-                                  icondata: FontAwesome.coffee),
-                            ],
-                          )
-                        : Column(
+                    child: (isSmall) || (isMobile)
+                        ? Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
@@ -91,7 +63,37 @@ class Services extends StatelessWidget {
                                   desc: '配達完了連絡を待ちます',
                                   icondata: FontAwesome.coffee),
                             ],
-                          ))),
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              DesktopServiceView(
+                                mainColor: Theme.of(context).primaryColor,
+                                subColor: secondaryColor,
+                                desc: 'xxxxxxxxにメッセージを送ってください',
+                                icondata: FontAwesome5.comment_dots,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(36.0),
+                                child: Icon(FontAwesome.chevron_right),
+                              ),
+                              DesktopServiceView(
+                                  mainColor: Theme.of(context).primaryColor,
+                                  subColor: secondaryColor,
+                                  desc: '指定した日時に集荷しに行きます',
+                                  icondata: FontAwesome.truck),
+                              Padding(
+                                padding: EdgeInsets.all(36.0),
+                                child: Icon(FontAwesome.chevron_right),
+                              ),
+                              DesktopServiceView(
+                                  mainColor: Theme.of(context).primaryColor,
+                                  subColor: secondaryColor,
+                                  desc: '配達完了連絡を待ちます',
+                                  icondata: FontAwesome.coffee),
+                            ],
+                          )),
                 Padding(
                   padding: EdgeInsets.only(top: 40.0, bottom: 24.0),
                   child: Text(
@@ -100,38 +102,8 @@ class Services extends StatelessWidget {
                   ),
                 ),
                 Container(
-                    child: (isDesktop
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              DesktopServiceView(
-                                mainColor: secondaryColor,
-                                subColor: Theme.of(context).primaryColor,
-                                desc: 'asigarから連絡するので，配達日時を伝えてください',
-                                icondata: FontAwesome5.comment_dots,
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: secondaryColor,
-                                  subColor: Theme.of(context).primaryColor,
-                                  desc: '配達が来るまで待ちます',
-                                  icondata: FontAwesome.coffee),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: secondaryColor,
-                                  subColor: Theme.of(context).primaryColor,
-                                  desc: '指定した日時に配達します',
-                                  icondata: FontAwesome.truck),
-                            ],
-                          )
-                        : Column(
+                    child: (isSmall) || (isMobile)
+                        ? Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
@@ -160,7 +132,37 @@ class Services extends StatelessWidget {
                                   desc: '指定した日時に配達します',
                                   icondata: FontAwesome.truck),
                             ],
-                          ))),
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              DesktopServiceView(
+                                mainColor: secondaryColor,
+                                subColor: Theme.of(context).primaryColor,
+                                desc: 'asigarから連絡するので，配達日時を伝えてください',
+                                icondata: FontAwesome5.comment_dots,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(36.0),
+                                child: Icon(FontAwesome.chevron_right),
+                              ),
+                              DesktopServiceView(
+                                  mainColor: secondaryColor,
+                                  subColor: Theme.of(context).primaryColor,
+                                  desc: '配達が来るまで待ちます',
+                                  icondata: FontAwesome.coffee),
+                              Padding(
+                                padding: EdgeInsets.all(36.0),
+                                child: Icon(FontAwesome.chevron_right),
+                              ),
+                              DesktopServiceView(
+                                  mainColor: secondaryColor,
+                                  subColor: Theme.of(context).primaryColor,
+                                  desc: '指定した日時に配達します',
+                                  icondata: FontAwesome.truck),
+                            ],
+                          )),
               ],
             )));
   }
@@ -178,9 +180,10 @@ class DesktopServiceView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
+    final isSmall = isDisplaySmallDesktop(context);
     return Container(
-      height: (isDesktop ? 200.0 : 150),
-      width: (isDesktop ? 280.0 : 280),
+      height: (isDesktop) ? 200.0 : 150,
+      width: (isDesktop) ? 280.0 : 280,
       child: Row(
         children: <Widget>[
           Padding(
@@ -200,7 +203,7 @@ class DesktopServiceView extends StatelessWidget {
                     .textTheme
                     .headline2
                     .apply(color: subColor),
-                maxLines: 4,
+                maxLines: 5,
               ),
             ),
           ),

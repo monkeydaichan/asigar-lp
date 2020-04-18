@@ -34,6 +34,10 @@ bool isDisplayDesktop(BuildContext context) {
   return displayTypeOf(context) == DisplayType.desktop;
 }
 
+bool isMobileDesktop(BuildContext context) {
+  return displayTypeOf(context) == DisplayType.mobile;
+}
+
 /// Returns a boolean if we are in a display of [DisplayType.desktop] but less
 /// than [_desktopLandscapeBreakpoint] width. Used to build adaptive and responsive layouts.
 bool isDisplaySmallDesktop(BuildContext context) {
