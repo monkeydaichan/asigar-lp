@@ -295,7 +295,7 @@ const RESOURCES = {
 "assets/fonts/Cousine-Regular.ttf": "64a889644e439ac4806c8e41bc9d1c83",
 "assets/AssetManifest.json": "952f58526803fe29aa5fd09c9be18d80",
 "assets/LICENSE": "806a8a9bef9cbb90683f6c3a31c93c8f",
-"main.dart.js": "fb3ed3417dc6d53b39d84ac85bfbfcd1"
+"main.dart.js": "72f7d71058308674cc0bfdc088d6f5a7"
 };
 
 self.addEventListener('activate', function (event) {
