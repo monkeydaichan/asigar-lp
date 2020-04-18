@@ -25,196 +25,206 @@ class Services extends StatelessWidget {
                   padding: EdgeInsets.only(bottom: 24.0),
                   child: Center(
                     child: Text(
-                      "呼んだら\n取りに来る",
+                      "荷物が届くまでの流れ",
                       style: Theme.of(context).textTheme.headline1,
                       textAlign: TextAlign.center,
                     ),
                   ),
                 ),
                 Container(
-                    // height: (isDesktop ? null : mobileHeight(context) * 2),
-                    child: (isSmall) || (isMobile)
-                        ? Column(
+                  // height: (isDesktop ? null : mobileHeight(context) * 2),
+                  child: (isSmall) || (isMobile)
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            DesktopServiceView(
+                              number: '①',
+                              desc: 'xxxxxxxxにメッセージを送ってください',
+                              icondata: FontAwesome5.comment_dots,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(FontAwesome.chevron_down),
+                            ),
+                            DesktopServiceView(
+                                number: '②',
+                                desc: '指定した日時に集荷しに行きます',
+                                icondata: FontAwesome.truck),
+                            Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(FontAwesome.chevron_down),
+                            ),
+                            DesktopServiceView(
+                                number: '③',
+                                desc: '配達完了連絡を待ちます',
+                                icondata: FontAwesome.coffee),
+                            Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(FontAwesome.chevron_down),
+                            ),
+                          ],
+                        )
+                      : Padding(
+                          padding: EdgeInsets.only(bottom: 16.0),
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               DesktopServiceView(
-                                mainColor: Theme.of(context).primaryColor,
-                                subColor: secondaryColor,
+                                number: '①',
                                 desc: 'xxxxxxxxにメッセージを送ってください',
                                 icondata: FontAwesome5.comment_dots,
                               ),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Icon(FontAwesome.chevron_down),
-                              ),
+                              Icon(FontAwesome.chevron_right),
                               DesktopServiceView(
-                                  mainColor: Theme.of(context).primaryColor,
-                                  subColor: secondaryColor,
+                                  number: '②',
                                   desc: '指定した日時に集荷しに行きます',
                                   icondata: FontAwesome.truck),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Icon(FontAwesome.chevron_down),
-                              ),
+                              Icon(FontAwesome.chevron_right),
                               DesktopServiceView(
-                                  mainColor: Theme.of(context).primaryColor,
-                                  subColor: secondaryColor,
+                                  number: '③',
                                   desc: '配達完了連絡を待ちます',
                                   icondata: FontAwesome.coffee),
-                            ],
-                          )
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              DesktopServiceView(
-                                mainColor: Theme.of(context).primaryColor,
-                                subColor: secondaryColor,
-                                desc: 'xxxxxxxxにメッセージを送ってください',
-                                icondata: FontAwesome5.comment_dots,
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: Theme.of(context).primaryColor,
-                                  subColor: secondaryColor,
-                                  desc: '指定した日時に集荷しに行きます',
-                                  icondata: FontAwesome.truck),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: Theme.of(context).primaryColor,
-                                  subColor: secondaryColor,
-                                  desc: '配達完了連絡を待ちます',
-                                  icondata: FontAwesome.coffee),
+                              Icon(FontAwesome.chevron_right),
                             ],
                           )),
-                Padding(
-                  padding: EdgeInsets.only(top: 40.0, bottom: 24.0),
-                  child: Text(
-                    "呼んだら\n配達する",
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
                 ),
                 Container(
-                    child: (isSmall) || (isMobile)
-                        ? Column(
+                  child: (isSmall) || (isMobile)
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            DesktopServiceView(
+                              number: '④',
+                              desc: 'asigarから連絡するので，配達日時を伝えてください',
+                              icondata: FontAwesome5.comment_dots,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(FontAwesome.chevron_down),
+                            ),
+                            DesktopServiceView(
+                                number: '⑤',
+                                desc: '配達が来るまで待ちます',
+                                icondata: FontAwesome.coffee),
+                            Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Icon(FontAwesome.chevron_down),
+                            ),
+                            DesktopServiceView(
+                                number: '⑥',
+                                desc: '指定した日時に配達します',
+                                icondata: FontAwesome.truck),
+                          ],
+                        )
+                      : Padding(
+                          padding: EdgeInsets.only(top: 16.0),
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
+                              Icon(FontAwesome.chevron_right),
                               DesktopServiceView(
-                                mainColor: secondaryColor,
-                                subColor: Theme.of(context).primaryColor,
+                                number: '④',
                                 desc: 'asigarから連絡するので，配達日時を伝えてください',
                                 icondata: FontAwesome5.comment_dots,
                               ),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Icon(FontAwesome.chevron_down),
-                              ),
+                              Icon(FontAwesome.chevron_right),
                               DesktopServiceView(
-                                  mainColor: secondaryColor,
-                                  subColor: Theme.of(context).primaryColor,
+                                  number: '⑤',
                                   desc: '配達が来るまで待ちます',
                                   icondata: FontAwesome.coffee),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Icon(FontAwesome.chevron_down),
-                              ),
+                              Icon(FontAwesome.chevron_right),
                               DesktopServiceView(
-                                  mainColor: secondaryColor,
-                                  subColor: Theme.of(context).primaryColor,
-                                  desc: '指定した日時に配達します',
-                                  icondata: FontAwesome.truck),
-                            ],
-                          )
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              DesktopServiceView(
-                                mainColor: secondaryColor,
-                                subColor: Theme.of(context).primaryColor,
-                                desc: 'asigarから連絡するので，配達日時を伝えてください',
-                                icondata: FontAwesome5.comment_dots,
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: secondaryColor,
-                                  subColor: Theme.of(context).primaryColor,
-                                  desc: '配達が来るまで待ちます',
-                                  icondata: FontAwesome.coffee),
-                              Padding(
-                                padding: EdgeInsets.all(36.0),
-                                child: Icon(FontAwesome.chevron_right),
-                              ),
-                              DesktopServiceView(
-                                  mainColor: secondaryColor,
-                                  subColor: Theme.of(context).primaryColor,
+                                  number: '⑥',
                                   desc: '指定した日時に配達します',
                                   icondata: FontAwesome.truck),
                             ],
                           )),
+                ),
               ],
             )));
   }
 }
 
 class DesktopServiceView extends StatelessWidget {
-  DesktopServiceView(
-      {Key key, this.desc, this.icondata, this.mainColor, this.subColor})
-      : super(key: key);
+  DesktopServiceView({
+    Key key,
+    this.desc,
+    this.icondata,
+    this.number,
+  }) : super(key: key);
 
   String desc;
+  String number;
   IconData icondata;
-  Color mainColor;
-  Color subColor;
+
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
     final isSmall = isDisplaySmallDesktop(context);
-    return Container(
-      height: (isDesktop) ? 200.0 : 150,
-      width: (isDesktop) ? 280.0 : 280,
-      child: Row(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(
-              icondata,
-              color: subColor,
-              size: (isDesktop ? 40 : 34),
-            ),
+    return Padding(
+      padding: EdgeInsets.all(0.0),
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+            minHeight: (isDesktop) ? 180.0 : 150,
+            minWidth: (isDesktop) ? 180.0 : 280,
+            maxHeight: (isDesktop) ? 180.0 : 180,
+            maxWidth: (isDesktop) ? 250.0 : 280),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Theme.of(context).primaryColor,
+            boxShadow: [
+              BoxShadow(color: secondaryColor, spreadRadius: 3),
+            ],
           ),
-          Flexible(
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                desc,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline2
-                    .apply(color: subColor),
-                maxLines: 5,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    number,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline2
+                        .apply(color: secondaryColor),
+                  ),
+                ),
               ),
-            ),
+              Row(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(
+                      icondata,
+                      color: secondaryColor,
+                      size: (isDesktop ? 40 : 34),
+                    ),
+                  ),
+                  Flexible(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        desc,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline2
+                            .apply(color: secondaryColor),
+                        maxLines: 6,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-        ],
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: mainColor,
-        boxShadow: [
-          BoxShadow(color: subColor, spreadRadius: 3),
-        ],
+        ),
       ),
     );
   }
