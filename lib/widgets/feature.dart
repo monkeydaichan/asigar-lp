@@ -12,9 +12,7 @@ class FuturePoint extends StatelessWidget {
     final isDesktop = isDisplayDesktop(context);
 
     return Container(
-        height: (isDesktop
-            ? desktopHeight(context) * 0.5
-            : mobileHeight(context) * 2),
+        padding: EdgeInsets.all(24.0),
         width: (isDesktop ? null : fullWidth(context)),
         color: bgColor2,
         child: (isDesktop
@@ -63,7 +61,7 @@ class PointListView extends StatelessWidget {
 
     return Column(
       mainAxisAlignment:
-          (isDesktop ? MainAxisAlignment.spaceEvenly : MainAxisAlignment.start),
+          (isDesktop ? MainAxisAlignment.start : MainAxisAlignment.start),
       children: <Widget>[
         Container(
           width: (isDesktop ? 150.0 : 100.0),
@@ -84,10 +82,17 @@ class PointListView extends StatelessWidget {
               style: Theme.of(context).textTheme.headline1.apply(
                   color: Colors.white, fontSizeDelta: (isDesktop ? 10 : 0))),
         ),
-        Text(desc,
+        Container(
+          height: (isDesktop) ? 100 : null,
+          child: Text(
+            desc,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.headline2.apply(
-                color: Colors.white, fontSizeDelta: (isDesktop ? 0 : 0))),
+                  color: Colors.white,
+                  fontSizeDelta: (isDesktop ? 0 : 0),
+                ),
+          ),
+        )
       ],
     );
   }
